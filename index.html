@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+<script>
+
+    function ef(){
+    document.getElementById("a").value='';
+    document.getElementById("b").value='';
+    aff.innerHTML="";
+    resul.innerHTML="";
+    }
+    
+    function aleert(){
+    var lo =document.getElementById("a").value;
+    var d =document.getElementById("b").value;
+    var resultat;
+    var dep = lo;
+    var nbr = d;
+    var compteur = 0;
+    
+    function process(){
+    while(compteur<nbr){
+    resultat= dep * 2 -5;
+    dep=resultat;
+    compteur++;
+    }
+    
+    }
+    process();
+    
+    var l=document.getElementById("aff");
+    var resul=document.getElementById("resul");
+    aff.innerHTML = "Hello ! Le résultat est :";
+    resul.innerHTML = resultat;
+    
+    
+    if(resultat===undefined){
+    aff.innerHTML="Remplis bien les valeurs s'il te plaît.<br><br>😂😂😂";
+    }
+    
+    } 
+    </script>
+
+<style type="text/css">
+
+body{
+background: black;
+
+}
+
+
+#heures{
+   background: yellow;
+   color:black;
+   font-family: Georgia, serif;
+  padding:5px;
+  border:1px solid;
+   font-weight:bold;
+  font-size:16px;
+}
+
+#minutes{
+  background:yellow;
+   color:black;
+  font-family:Georgia,sans-serif;
+  padding:5px;
+  border:1px solid;
+   font-weight:bold;
+  font-size:16px;
+}
+
+#secondes{
+  background:red;
+  color:white;
+  font-family:cursive;
+  font-weight:bold;
+  font-size:14px;
+  padding:4px;
+  border:1px solid black;
+}
+
+#o{
+
+color:white;
+background: transparent;
+padding: 5px;
+border: 4px solid green;
+}
+
+#ef{
+color:white;
+background: transparent;
+padding: 5px;
+border: 4px solid red;
+}
+
+#a,#b{
+width:95%;
+height:135%;
+padding:10px;
+}
+
+#aff{color:white;
+font-weight:bold;
+text-align:center;
+font-size:18px;}
+
+#resul{
+color:red;
+text-align:center;
+padding:3px;
+font-size:28px;
+font-family : cursive;
+font-weight : bold;
+}
+
+#algo{
+
+margin-top:10%;} 
+
+</style>
+</head>
+<body onload="montre()">
+    <div style="margin-top: 25px;">
+    <Span id="salut" style="color:white; font-size:20px;margin-top:35px;margin-left:15px;margin-right:25%;"></Span><span id="heures"></span><span id="minutes"></span><span id="secondes"></span><br><br>
+</div>
+<center>
+
+<div id="algo">
+<input id="a" type="number" placeholder="Choisis un nombre de départ. (depart - x)😉"><br><br>
+<input id="b" type="number" placeholder="J'exécute la fonction combien de fois ? (nbr_tours -y)🤔">
+<br><br>
+
+<button id="o" onclick="aleert();">Afficher le resultat 😎</button><br><br>
+<button id="ef" onclick="ef();">Réinitialiser 👈</button><br><br>
+
+</center>
+</div>
+
+<div id="afficher">
+<h2 id="aff"></h2>
+<p id="resul"></p>
+</div>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>
